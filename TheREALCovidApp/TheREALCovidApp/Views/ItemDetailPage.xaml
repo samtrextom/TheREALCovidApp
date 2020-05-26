@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TheREALCovidApp.Views.ItemDetailPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+            <Label Text="Name"/>
+            <Entry Text="{Binding Name}"/>
+            <Label Text="Description"/>
+            <Entry Text="{Binding Description}"/>
+            <Label Text="Due Date"/>
+            <DatePicker x:Name="DueDate" Format="D" Margin="20,0,0,20"/>
+            <Button Text="Save" Clicked="OnSaveClicked"/>
+            <Button Text="Delete" Clicked="OnDeleteClicked"/>
+            <Button Text="Cancel" Clicked="OnCancelClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
